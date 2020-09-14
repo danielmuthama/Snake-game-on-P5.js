@@ -1,16 +1,13 @@
-// Daniel Shiffman
-// http://youtube.com/thecodingtrain
-// http://codingtra.in
 
-// Coding Challenge #115: Snake Game Redux
-// https://youtu.be/OMoVcohRgZA
 
+//daniel muthama
+//declaring the variables
 let snake;
 let rez = 20;
 let food;
 let w;
 let h;
-
+//set up function
 function setup() {
   createCanvas(400, 400);
   w = floor(width / rez);
@@ -19,13 +16,13 @@ function setup() {
   snake = new Snake();
   foodLocation();
 }
-
+//how food is randomly created in foodlocation function
 function foodLocation() {
   let x = floor(random(w));
   let y = floor(random(h));
   food = createVector(x, y);
 }
-
+//how keypresssed function works when pressed
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
     snake.setDir(-1, 0);
@@ -39,7 +36,7 @@ function keyPressed() {
     snake.grow();
   }
 }
-
+//draw function
 function draw() {
   scale(rez);
   background(220);
